@@ -94,7 +94,7 @@ The microservice is containerized using Docker and deployed to a Kubernetes clus
 ### Running Without Minikube
 
 1. Build and run the Docker container locally:
-
+   cd ..
    ```bash
    docker build -t python-microservice .
    docker run -p 5000:5000 python-microservice
