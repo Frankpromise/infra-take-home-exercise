@@ -67,7 +67,7 @@ Clone the repository:
    git clone https://github.com/Frankpromise/infra-take-home-exercise.git
    cd infra-take-home-exercise
    ```
-###Quick application deployment
+### Quick application deployment
 ```
 chmod +x build-and-deploy.sh
 ./build-and-deploy.sh
