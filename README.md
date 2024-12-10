@@ -49,7 +49,7 @@ The microservice is containerized using Docker and deployed to a Kubernetes clus
 ## Requirements
 
 ### Local Development
-
+make sure you have the following already installed in your local environment
 - Python 3.9+
 - Flask
 - pip
@@ -60,64 +60,46 @@ The microservice is containerized using Docker and deployed to a Kubernetes clus
 - kubectl
 - Docker
 
+Clone the repository:
+
+   ```bash
+   git clone https://github.com/Frankpromise/infra-take-home-exercise.git
+   cd infra-take-home-exercise
+   ```
 ---
 
 ## Setup Instructions
 
-### Local Development
+### Local Development without docker
 
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/Frankpromise/infra-take-home-exercise.git
+1. ```terminal
    cd microservice
+   flask run 
    ```
+2. Navigate to the url displayed on the terminal
 
-2. Install dependencies:
+### Local Development with docker but without minikube
 
-   ```bash
-   pip3 install -r requirements.txt
-   ```
-
-3. Run the service:
-
-   ```bash
-   python3 app.py
-   ```
-
-4. Access the service locally:
-
-   ```bash
-   curl http://127.0.0.1:5000/student
-   ```
-
-### Running Without Minikube
 
 1. Build and run the Docker container locally:
-   cd ..
    ```bash
+   cd ..
    docker build -t python-microservice .
-   docker run -p 5000:5000 python-microservice
+   docker run -p 8080:8080 python-microservice
+   ```
+   or run in detach mode
+
+   ```
+   docker run -d -name app -p 8080:8080 python-microservice
    ```
 
 2. Access the service:
 
+   Navigate to the url displayed on the terminal
+
+   or 
    ```bash
-   curl http://127.0.0.1:5000/student
-   ```
-
-### Docker Build
-
-1. Build the Docker image:
-
-   ```bash
-   docker build -t python-microservice .
-   ```
-
-2. Run the Docker container:
-
-   ```bash
-   docker run -p 5000:5000 python-microservice
+   curl http://127.0.0.1:8080/student
    ```
 
 3. Test the service:
@@ -127,7 +109,7 @@ The microservice is containerized using Docker and deployed to a Kubernetes clus
    ```
 ---
 
-## Kubernetes Deployment
+## Kubernetes Deployment with minikube
 
 ### Prerequisites
 
