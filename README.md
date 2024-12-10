@@ -101,12 +101,6 @@ Clone the repository:
    ```bash
    curl http://127.0.0.1:8080/student
    ```
-
-3. Test the service:
-
-   ```bash
-   curl http://127.0.0.1:5000/student
-   ```
 ---
 
 ## Kubernetes Deployment with minikube
