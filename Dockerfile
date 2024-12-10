@@ -3,11 +3,6 @@ FROM python:3.11-slim
 # Set environment variables to optimize runtime behavior
 ENV PYTHONDONTWRITEBYTECODE=1
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential && \
-    apt-get clean && rm -rf /var/lib/apt/lists/*
-
 # Create a non-root user and group for the application
 RUN groupadd -r appuser && useradd --no-log-init -r -g appuser appuser
 
