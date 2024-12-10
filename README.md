@@ -146,7 +146,6 @@ Clone the repository:
 
    ```bash
    kubectl apply -f release/deployment.yaml
-   kubectl apply -f release/service.yaml
    ```
 
 3. Verify the deployment:
