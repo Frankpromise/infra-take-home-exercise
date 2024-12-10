@@ -1,4 +1,5 @@
 # infra-take-home-exercise
+## Thought process
 ![image](https://github.com/user-attachments/assets/555e398a-b12f-4f40-8008-fe7781de1f17)
 
 
@@ -177,6 +178,7 @@ The script:
 2. Builds the Docker image in Minikube's environment.
 3. Applies the Kubernetes manifests.
 4. Waits for the deployment to become ready.
+5. Automatically redirects you to the browser. Make sure to add a /student at the end
 
 ---
 
