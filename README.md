@@ -167,7 +167,8 @@ Clone the repository:
 Run the provided Bash script to build and deploy the microservice with a single command:
 
 ```bash
-./deploy.sh
+chmod +x build-and-deploy.sh
+./build-and-deploy.sh
 ```
 
 The script:
